@@ -23,10 +23,11 @@
     background-color: var(--inputColor);
     border-radius: 10px;
     padding: 10px;
+    margin: 0.5rem; 
     font-size: 17px;
     border: none; 
     outline: none;
-    width: 185%;
+    width: 100%;
 }
 
 .postOptions{
@@ -36,8 +37,8 @@
 
 .option{
     padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 40px;
+    padding-right: 50px;
     border-radius: 10px;
     display: flex;
     align-items: center;
