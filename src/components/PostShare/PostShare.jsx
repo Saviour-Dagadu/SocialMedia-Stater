@@ -6,6 +6,7 @@ import {UilPlayCircle} from '@iconscout/react-unicons';
 import {uilLocationPoint} from '@iconscout/react-unicons';
 import{UilSchedule} from '@iconscout/react-unicons';
 import{UilTimes} from '@iconscout/react-unicons';
+import ShareModal from '../ShareModal/ShareModal';
 
 const PostShare = () => {
     const [image, setImage] = useState(null)
@@ -19,6 +20,9 @@ const PostShare = () => {
             });
         }
     }
+
+    const [modalOpened, setModalOpened] = useState(false)
+
     return (
         <div className="PostShare">
             <img src={ProfileImage} alt=""/>
@@ -34,6 +38,7 @@ const PostShare = () => {
                     </div>
                     <div className="option"
                     style={{color: 'var(--video)'}}
+                    onClick={()=>imageRef.current.click()}
                     >
                         <UilPlayCircle/>
                         Video
@@ -50,9 +55,10 @@ const PostShare = () => {
                         <UilSchedule/>
                         Schedule
                     </div>
-                    <button className='button ps-button'>
+                    <button className='button ps-button' onClick={()=>setModalOpened(true)}>
                         Share
                     </button>
+                    <ShareModal modalOpened={modalOpened}  setModalOpened={setModalOpened}/>
                     <div style={{display: "none"}}>
                         <input type="file" name="myImage" ref={imageRef} onChange={onImageChange} />
                     </div>
