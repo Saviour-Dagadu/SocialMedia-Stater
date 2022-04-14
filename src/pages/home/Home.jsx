@@ -9,7 +9,6 @@ const Home = () => {
             <ProfileSide/>
             <PostSide/>
             <RightSide/>
-            <div className="RightSide">RightSide</div>
         </div>
     )
 }
